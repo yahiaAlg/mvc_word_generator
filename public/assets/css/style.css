@@ -1,0 +1,185 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Letter buttons */
+.letter-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.letter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative; /* For positioning letter count */
+}
+
+.letter-btn:hover {
+  background-color: #ced4da;
+}
+
+.letter-btn.selected {
+  background-color: #4dabf7;
+  color: white;
+}
+
+/* Letter count badge */
+.letter-count {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Controls */
+.controls {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selected-letters {
+  padding: 15px;
+  background-color: #f1f3f5;
+  border-radius: 4px;
+  min-height: 50px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.selected-letters .placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+.guess-btn,
+.clear-btn {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.guess-btn {
+  background-color: #4dabf7;
+  color: white;
+}
+
+.guess-btn:hover {
+  background-color: #339af0;
+}
+
+.clear-btn {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.clear-btn:hover {
+  background-color: #ced4da;
+}
+
+/* Results */
+.results-container {
+  margin-top: 30px;
+}
+
+.results {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 15px;
+  min-height: 100px;
+}
+
+.result-count {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.words-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.word-item {
+  background-color: #e9ecef;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.no-results {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .letter-buttons {
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  }
+
+  .letter-btn {
+    height: 40px;
+    font-size: 16px;
+  }
+}
