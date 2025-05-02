@@ -75,9 +75,10 @@ DB_PASSWORD=your_password
 Run the migration:
 
 ```bash
-mysql -u your_username -p < migrations/20250501_create_words_table.sql
+mysql -u root -p < migrations/20250501_create_words_table.sql
 ```
 
+username: `root`, password: ` ` ( empty password )
 Import a dictionary file using the seeder:
 
 ```bash
