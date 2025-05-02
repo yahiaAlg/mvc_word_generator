@@ -51,8 +51,8 @@ A custom lightweight MVC application that lets users select letters and find all
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/guess-words-app.git
-cd guess-words-app
+git clone https://github.com/yahiaAlg/mvc_word_generator.git
+cd mvc_word_generator
 ```
 
 ### 2. Set up environment variables
